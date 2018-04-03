@@ -11,6 +11,7 @@
 #include <sys/msg.h>    /* System V Message */
 #include <sys/sem.h>    /* System V Semaphore */
 #include <sys/shm.h>    /* System V Shared Memory */
+#include <errno.h>      /* Error difinations */
 
 /*
 +---------------+---------------+---------------+---------------+
@@ -25,8 +26,16 @@
 |    Control    |    msgctl()   |    semctl()   |    shmctl()   |
 +---------------+---------------+---------------+---------------+
 |      IPC      |    msgsnd()   |    semop()    |               |
-|    Operate    |    msgrcv()   |               |               |
+|    Operate    |    msgrcv()   |     (P/V)     |               |
 +---------------+---------------+---------------+---------------+
 */
+
+/* True and false defines */
+#ifndef FALSE
+  #define FALSE 0
+#endif // !FALSE
+#ifndef TRUE
+  #define TRUE 1
+#endif // !TRUE
 
 #endif // !ZXCPYP_SYSTRMV_IPC_H

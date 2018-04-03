@@ -19,11 +19,19 @@
 #include "zxcpyp_err.h" /* Error handling functions */
 
 /* True and false defines */
-#define FALSE 0
-#define TRUE 1
+#ifndef FALSE
+  #define FALSE 0
+#endif // !FALSE
+#ifndef TRUE
+  #define TRUE 1
+#endif // !TRUE
 
 /* Max and min defines */
-#define min(m, n) ((m) < (n) ? (m) : (n))
-#define max(m, n) ((m) > (n) ? (m) : (n))
+#ifndef min
+  #define min(m, n) ((m) < (n) ? (m) : (n))
+#endif // !min
+#ifndef max
+  #define max(m, n) ((m) > (n) ? (m) : (n))
+#endif // !max
 
 #endif // !ZXCPYP_H

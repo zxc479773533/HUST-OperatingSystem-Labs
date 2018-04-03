@@ -1,7 +1,7 @@
 /*
  * zxcpyp's lib
  *
- * Error message functions implemention
+ * zxcpyp error message lib
  */
 
 #include "zxcpyp_err.h"

@@ -1,7 +1,7 @@
 /*
  * zxcpyp's lib
  *
- * Error message functions
+ * zxcpyp error message header
  */
 
 #ifndef ZXCPYP_ERR_H

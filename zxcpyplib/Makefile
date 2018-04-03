@@ -152,6 +152,33 @@ zxcpyp_err.c.s:
 	cd /home/panyue/code/my_github/HUST-OperatingSystem-Labs && $(MAKE) -f zxcpyplib/CMakeFiles/zxcpyp_lib.dir/build.make zxcpyplib/CMakeFiles/zxcpyp_lib.dir/zxcpyp_err.c.s
 .PHONY : zxcpyp_err.c.s
 
+zxcpyp_sem.o: zxcpyp_sem.c.o
+
+.PHONY : zxcpyp_sem.o
+
+# target to build an object file
+zxcpyp_sem.c.o:
+	cd /home/panyue/code/my_github/HUST-OperatingSystem-Labs && $(MAKE) -f zxcpyplib/CMakeFiles/zxcpyp_lib.dir/build.make zxcpyplib/CMakeFiles/zxcpyp_lib.dir/zxcpyp_sem.c.o
+.PHONY : zxcpyp_sem.c.o
+
+zxcpyp_sem.i: zxcpyp_sem.c.i
+
+.PHONY : zxcpyp_sem.i
+
+# target to preprocess a source file
+zxcpyp_sem.c.i:
+	cd /home/panyue/code/my_github/HUST-OperatingSystem-Labs && $(MAKE) -f zxcpyplib/CMakeFiles/zxcpyp_lib.dir/build.make zxcpyplib/CMakeFiles/zxcpyp_lib.dir/zxcpyp_sem.c.i
+.PHONY : zxcpyp_sem.c.i
+
+zxcpyp_sem.s: zxcpyp_sem.c.s
+
+.PHONY : zxcpyp_sem.s
+
+# target to generate assembly for a file
+zxcpyp_sem.c.s:
+	cd /home/panyue/code/my_github/HUST-OperatingSystem-Labs && $(MAKE) -f zxcpyplib/CMakeFiles/zxcpyp_lib.dir/build.make zxcpyplib/CMakeFiles/zxcpyp_lib.dir/zxcpyp_sem.c.s
+.PHONY : zxcpyp_sem.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -164,6 +191,9 @@ help:
 	@echo "... zxcpyp_err.o"
 	@echo "... zxcpyp_err.i"
 	@echo "... zxcpyp_err.s"
+	@echo "... zxcpyp_sem.o"
+	@echo "... zxcpyp_sem.i"
+	@echo "... zxcpyp_sem.s"
 .PHONY : help
 
 

@@ -60,3 +60,4 @@ CMakeScripts
 CMakeCache.txt
 cmake_install.cmake
 pipe
+lab01_fifo

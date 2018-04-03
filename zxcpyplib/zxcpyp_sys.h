@@ -12,7 +12,9 @@
 #include <string.h>     /* String handling functions */
 #include <unistd.h>     /* Unix system calls */
 #include <errno.h>      /* Error difinations */
+#include <fcntl.h>      /* Micros for I/O */
 #include <sys/types.h>  /* System data type */
+#include <sys/stat.h>   /* File system status */
 
 #include "zxcpyp_err.h" /* Error handling functions */
 

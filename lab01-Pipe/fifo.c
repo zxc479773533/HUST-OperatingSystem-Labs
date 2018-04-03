@@ -8,7 +8,9 @@
 #include <signal.h>
 #include <wait.h>
 
+#define FIFO "lab01_fifo"
 #define BUF_SIZE 30
+
 
 int pid1, pid2;
 
@@ -42,13 +44,13 @@ void sigusr_handler(int sig) {
 }
 
 int main(void) {
-  int pfd[2];
+  int read_fd, write_fd;
   char read_buf[BUF_SIZE];
   int read_num;
   int wait_tmp;
   signal(SIGINT, sigint_handler);
 
-  if (pipe(pfd) == -1)
+  if (mkfifo(FIFO, S_IRUSR | S_IWUSR) == -1 && errno != EEXIST)
     err_exit("Pipe");
   
   switch (pid1 = fork()) {
@@ -61,14 +63,16 @@ int main(void) {
       signal(SIGINT, SIG_IGN);
       /* Catch SIGUSR2 */
       signal(SIGUSR1, sigusr_handler);
-      if (close(pfd[0]) == -1)
-        err_exit("Child 1 close read fd");
+
+      /* Open FIFO writter */
+      if ((write_fd = open(FIFO, O_WRONLY)) == -1)
+        err_exit("FIFO writter open");
       
       int count = 1;
       char write_buf[BUF_SIZE];
       for (;;) {
         sprintf(write_buf, "I send you %d times.\n", count);
-        if (write(pfd[1], write_buf, strlen(write_buf)) != strlen(write_buf))
+        if (write(write_fd, write_buf, strlen(write_buf)) != strlen(write_buf))
           err_exit("Child 1 write");
         sleep(1);
         count++;
@@ -86,11 +90,12 @@ int main(void) {
           signal(SIGINT, SIG_IGN);
           /* Catch SIGUSR2 */
           signal(SIGUSR2, sigusr_handler);
-          if (close(pfd[1] == -1))
-            err_exit("Child 2 close write fd");
+
+          if ((read_fd = open(FIFO, O_RDONLY)) == -1)
+            err_exit("FIFO reader open");
           
           for (;;) {
-            read_num = read(pfd[0], read_buf, BUF_SIZE);
+            read_num = read(read_fd, read_buf, BUF_SIZE);
             if (read_num == -1)
               err_exit("Child 2 read");
             if (read_num == 0)
@@ -101,11 +106,8 @@ int main(void) {
 
         /* Parent pid */
         default:
-          if (close(pfd[0]) == -1)
-            err_exit("Parent close pfd[0]");
-          if (close(pfd[1]) == -1)
-            err_exit("Parent close pfd[1]");
           /* Wait for child pid */
+          
           waitpid(pid1, &wait_tmp, 0);
           waitpid(pid1, &wait_tmp, 0);
           printf("Parent Process is Killed!\n");

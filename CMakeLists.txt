@@ -4,6 +4,8 @@ project(OS_labs)
 
 add_subdirectory(./zxcpyplib)
 
-aux_source_directory(./lab01-Pipe dir_main)
-add_executable(pipe ${dir_main})
+add_executable(pipe ./lab01-Pipe/pipe.c)
 target_link_libraries(pipe zxcpyp_lib)
+
+add_executable(fifo ./lab01-Pipe/fifo.c)
+target_link_libraries(fifo zxcpyp_lib)

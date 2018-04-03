@@ -124,6 +124,19 @@ pipe/fast:
 .PHONY : pipe/fast
 
 #=============================================================================
+# Target rules for targets named fifo
+
+# Build rule for target.
+fifo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 fifo
+.PHONY : fifo
+
+# fast build rule for target.
+fifo/fast:
+	$(MAKE) -f CMakeFiles/fifo.dir/build.make CMakeFiles/fifo.dir/build
+.PHONY : fifo/fast
+
+#=============================================================================
 # Target rules for targets named zxcpyp_lib
 
 # Build rule for target.
@@ -135,6 +148,33 @@ zxcpyp_lib: cmake_check_build_system
 zxcpyp_lib/fast:
 	$(MAKE) -f zxcpyplib/CMakeFiles/zxcpyp_lib.dir/build.make zxcpyplib/CMakeFiles/zxcpyp_lib.dir/build
 .PHONY : zxcpyp_lib/fast
+
+lab01-Pipe/fifo.o: lab01-Pipe/fifo.c.o
+
+.PHONY : lab01-Pipe/fifo.o
+
+# target to build an object file
+lab01-Pipe/fifo.c.o:
+	$(MAKE) -f CMakeFiles/fifo.dir/build.make CMakeFiles/fifo.dir/lab01-Pipe/fifo.c.o
+.PHONY : lab01-Pipe/fifo.c.o
+
+lab01-Pipe/fifo.i: lab01-Pipe/fifo.c.i
+
+.PHONY : lab01-Pipe/fifo.i
+
+# target to preprocess a source file
+lab01-Pipe/fifo.c.i:
+	$(MAKE) -f CMakeFiles/fifo.dir/build.make CMakeFiles/fifo.dir/lab01-Pipe/fifo.c.i
+.PHONY : lab01-Pipe/fifo.c.i
+
+lab01-Pipe/fifo.s: lab01-Pipe/fifo.c.s
+
+.PHONY : lab01-Pipe/fifo.s
+
+# target to generate assembly for a file
+lab01-Pipe/fifo.c.s:
+	$(MAKE) -f CMakeFiles/fifo.dir/build.make CMakeFiles/fifo.dir/lab01-Pipe/fifo.c.s
+.PHONY : lab01-Pipe/fifo.c.s
 
 lab01-Pipe/pipe.o: lab01-Pipe/pipe.c.o
 
@@ -170,9 +210,13 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... pipe"
 	@echo "... edit_cache"
+	@echo "... pipe"
+	@echo "... fifo"
 	@echo "... zxcpyp_lib"
+	@echo "... lab01-Pipe/fifo.o"
+	@echo "... lab01-Pipe/fifo.i"
+	@echo "... lab01-Pipe/fifo.s"
 	@echo "... lab01-Pipe/pipe.o"
 	@echo "... lab01-Pipe/pipe.i"
 	@echo "... lab01-Pipe/pipe.s"

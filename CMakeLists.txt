@@ -14,8 +14,8 @@ target_link_libraries(fifo zxcpyp_lib)
 
 # build lab02
 add_executable(sync ./lab02-Sync/sync.c)
-target_link_libraries(sync zxcpyp_lib thread)
+target_link_libraries(sync zxcpyp_lib pthread)
 
 # build lab03
 add_executable(filecp ./lab03-FileCopy/filecp.c)
-target_link_libraries(filecp zxcpyp_lib thread)
+target_link_libraries(filecp zxcpyp_lib pthread)

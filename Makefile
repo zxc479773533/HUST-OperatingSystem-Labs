@@ -111,6 +111,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named filecp
+
+# Build rule for target.
+filecp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 filecp
+.PHONY : filecp
+
+# fast build rule for target.
+filecp/fast:
+	$(MAKE) -f CMakeFiles/filecp.dir/build.make CMakeFiles/filecp.dir/build
+.PHONY : filecp/fast
+
+#=============================================================================
+# Target rules for targets named sync
+
+# Build rule for target.
+sync: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sync
+.PHONY : sync
+
+# fast build rule for target.
+sync/fast:
+	$(MAKE) -f CMakeFiles/sync.dir/build.make CMakeFiles/sync.dir/build
+.PHONY : sync/fast
+
+#=============================================================================
 # Target rules for targets named pipe
 
 # Build rule for target.
@@ -203,6 +229,60 @@ lab01-Pipe/pipe.c.s:
 	$(MAKE) -f CMakeFiles/pipe.dir/build.make CMakeFiles/pipe.dir/lab01-Pipe/pipe.c.s
 .PHONY : lab01-Pipe/pipe.c.s
 
+lab02-Sync/sync.o: lab02-Sync/sync.c.o
+
+.PHONY : lab02-Sync/sync.o
+
+# target to build an object file
+lab02-Sync/sync.c.o:
+	$(MAKE) -f CMakeFiles/sync.dir/build.make CMakeFiles/sync.dir/lab02-Sync/sync.c.o
+.PHONY : lab02-Sync/sync.c.o
+
+lab02-Sync/sync.i: lab02-Sync/sync.c.i
+
+.PHONY : lab02-Sync/sync.i
+
+# target to preprocess a source file
+lab02-Sync/sync.c.i:
+	$(MAKE) -f CMakeFiles/sync.dir/build.make CMakeFiles/sync.dir/lab02-Sync/sync.c.i
+.PHONY : lab02-Sync/sync.c.i
+
+lab02-Sync/sync.s: lab02-Sync/sync.c.s
+
+.PHONY : lab02-Sync/sync.s
+
+# target to generate assembly for a file
+lab02-Sync/sync.c.s:
+	$(MAKE) -f CMakeFiles/sync.dir/build.make CMakeFiles/sync.dir/lab02-Sync/sync.c.s
+.PHONY : lab02-Sync/sync.c.s
+
+lab03-FileCopy/filecp.o: lab03-FileCopy/filecp.c.o
+
+.PHONY : lab03-FileCopy/filecp.o
+
+# target to build an object file
+lab03-FileCopy/filecp.c.o:
+	$(MAKE) -f CMakeFiles/filecp.dir/build.make CMakeFiles/filecp.dir/lab03-FileCopy/filecp.c.o
+.PHONY : lab03-FileCopy/filecp.c.o
+
+lab03-FileCopy/filecp.i: lab03-FileCopy/filecp.c.i
+
+.PHONY : lab03-FileCopy/filecp.i
+
+# target to preprocess a source file
+lab03-FileCopy/filecp.c.i:
+	$(MAKE) -f CMakeFiles/filecp.dir/build.make CMakeFiles/filecp.dir/lab03-FileCopy/filecp.c.i
+.PHONY : lab03-FileCopy/filecp.c.i
+
+lab03-FileCopy/filecp.s: lab03-FileCopy/filecp.c.s
+
+.PHONY : lab03-FileCopy/filecp.s
+
+# target to generate assembly for a file
+lab03-FileCopy/filecp.c.s:
+	$(MAKE) -f CMakeFiles/filecp.dir/build.make CMakeFiles/filecp.dir/lab03-FileCopy/filecp.c.s
+.PHONY : lab03-FileCopy/filecp.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -211,6 +291,8 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... filecp"
+	@echo "... sync"
 	@echo "... pipe"
 	@echo "... fifo"
 	@echo "... zxcpyp_lib"
@@ -220,6 +302,12 @@ help:
 	@echo "... lab01-Pipe/pipe.o"
 	@echo "... lab01-Pipe/pipe.i"
 	@echo "... lab01-Pipe/pipe.s"
+	@echo "... lab02-Sync/sync.o"
+	@echo "... lab02-Sync/sync.i"
+	@echo "... lab02-Sync/sync.s"
+	@echo "... lab03-FileCopy/filecp.o"
+	@echo "... lab03-FileCopy/filecp.i"
+	@echo "... lab03-FileCopy/filecp.s"
 .PHONY : help
 
 

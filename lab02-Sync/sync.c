@@ -8,6 +8,7 @@
 #include "../zxcpyplib/zxcpyp_sem.h"
 #include <pthread.h>
 
+/* Seamphores defines */
 #define COMPUTE 0
 #define PRINT 1
 

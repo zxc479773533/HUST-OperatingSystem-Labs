@@ -16,6 +16,11 @@ void err_exit(const char *err) {
   exit(1);
 }
 
+void usage_err(const char *err) {
+  printf("Usage: %s\n", err);
+  exit(1);
+}
+
 void fatal_err(const char *err) {
   printf("Fatal: %s\n", err);
   exit(1);

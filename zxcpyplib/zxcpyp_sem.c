@@ -21,6 +21,12 @@ int init_sem_in_use(int sem_id, int sem_num) {
   return semctl(sem_id, sem_num, SETVAL, arg);
 }
 
+int init_sem_value(int sem_id, int sem_num, int sem_value) {
+  union semun arg;     /* semget() use arg to control */
+  arg.val = sem_value; /* Ordered semphore value */
+  return semctl(sem_id, sem_num, SETVAL, arg);
+}
+
 int sem_p(int sem_id, int sem_num) {
   struct sembuf sops;  /* semop() use sops to control */
   sops.sem_num = sem_num;

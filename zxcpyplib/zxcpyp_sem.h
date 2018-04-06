@@ -28,17 +28,22 @@ extern int RetryOnEintr;  /* Whether retry when semop() is interrupted */
 int init_sem_available(int sem_id, int sem_num);
 
 /*
- * init_sem_available - Initial a semaphore to 1
+ * init_sem_in_use - Initial a semaphore to 0
  */
 int init_sem_in_use(int sem_id, int sem_num);
 
 /*
- * init_sem_available - Initial a semaphore to 1
+ * init_sem_value- Initial a semaphore to sem_value
+ */
+int init_sem_value(int sem_id, int sem_num, int sem_value);
+
+/*
+ * sem_p - P operate
  */
 int sem_p(int sem_id, int sem_num);
 
 /*
- * init_sem_available - Initial a semaphore to 1
+ * sem_v - V operate
  */
 int sem_v(int sem_id, int sem_num);
 

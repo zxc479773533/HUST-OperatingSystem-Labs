@@ -48,7 +48,8 @@ int main(void) {
   pthread_t thread[2];
   void *thread_result;
   /* Create and inital 2 semaphore for user */
-  semid = semget(IPC_PRIVATE, 2, S_IRUSR | S_IWUSR);
+  if ((semid = semget(IPC_PRIVATE, 2, S_IRUSR | S_IWUSR)) == -1)
+    err_exit("Get semaphore");
   if (init_sem_available(semid, COMPUTE) == -1)
     err_exit("Initial compute semaphore");
   if (init_sem_in_use(semid, PRINT) == -1)

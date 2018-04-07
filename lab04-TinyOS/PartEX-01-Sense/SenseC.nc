@@ -72,11 +72,11 @@ implementation
   }
 
   event void Timer.fired()
-	{	
-		call readTemp.read(); // Read temporary
-		call readHumidity.read();  // Read humidity
-		call readPhoto.read();  // Read photovoltaic
-	}
+  {	
+    call readTemp.read(); // Read temporary
+    call readHumidity.read();  // Read humidity
+    call readPhoto.read();  // Read photovoltaic
+  }
 
   // Temporary handler
   event void readTemp.readDone(error_t result, uint16_t val) 

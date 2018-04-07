@@ -53,8 +53,8 @@ module SenseC
     interface Leds;
     interface Timer<TMilli>;
     interface Read<uint16_t> as readTemp;
-	  interface Read<uint16_t> as readHumidity;
-	  interface Read<uint16_t> as readPhoto;
+    interface Read<uint16_t> as readHumidity;
+    interface Read<uint16_t> as readPhoto;
   }
 }
 implementation

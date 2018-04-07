@@ -27,3 +27,4 @@ Using some codes from `zxcpyplib`.
 * Part II : Add compute in LED 1
 * Part III: Implement compute by task
 * Part IV : Implement compute by Split-phase task
+* Prat EX : Sensor data Communication

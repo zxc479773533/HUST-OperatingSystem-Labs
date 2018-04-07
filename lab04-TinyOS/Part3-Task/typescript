@@ -1,0 +1,158 @@
+Script started on 2018-03-09 21:05:40+0800
+[1m[7m%[27m[1m[0m                                                                                                                                                                             ]2;panyue@Saltedfish: ~/tinyos-2.1.2/apps/Blink]1;...2/apps/Blink[0m[27m[24m[J[39m[0m[49m[40m[39m panyue@Saltedfish [44m[30m[30m ~/tinyos-2.1.2/apps/Blink [49m[34m[39m [K[?1h=[?2004hppy
+[0mpycodestyle            pyenv_prompt_info      pygtk-demo             python                 python3                python3-config                              
+pydoc                  pyflakes               pylint                 python2                python3.6              python-config                               
+pydoc2                 pyflakes3k             pylupdate5             python2.7              python3.6-config       pyuic5                                      
+pydoc3                 pygobject-codegen-2.0  pyrcc5                 python2.7-config       python3.6m             pyvenv                                      
+[Jpydoc3.6               [Jpygtk-codegen-2.0      [Jpyreverse              [Jpython2-config         [Jpython3.6m-config      [Jpyvenv-3.6             [J                     [5A[0m[27m[24m[0m[39m[49m[49Cpy[K[0m[39m[49mth
+[J[A[53Con[?1l>[?2004l
+[J]2;python]1;pythonPython 3.6.4 (default, Jan  5 2018, 02:35:40) 
+[GCC 7.2.1 20171224] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import asd
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'asd'
+>>> import serial
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'serial'
+>>> import serial[1PerialSerial
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'Serial'
+>>> python2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'python2' is not defined
+>>> 
+[1m[7m%[27m[1m[0m                                                                                                                                                                             ]2;panyue@Saltedfish: ~/tinyos-2.1.2/apps/Blink]1;...2/apps/Blink[0m[27m[24m[J[39m[0m[49m[40m[39m panyue@Saltedfish [44m[30m[30m ~/tinyos-2.1.2/apps/Blink [49m[34m[39m [K[?1h=[?2004hppython2[?1l>[?2004l
+]2;python2]1;python2Python 2.7.14 (default, Jan  5 2018, 10:41:29) 
+[GCC 7.2.1 20171224] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import serial
+>>> serial.VERSION
+'2.7'
+>>> pa[K[K
+[1m[7m%[27m[1m[0m                                                                                                                                                                             ]2;panyue@Saltedfish: ~/tinyos-2.1.2/apps/Blink]1;...2/apps/Blink[0m[27m[24m[J[39m[0m[49m[40m[39m panyue@Saltedfish [44m[30m[30m ~/tinyos-2.1.2/apps/Blink [49m[34m[39m [K[?1h=[?2004hppacman -Ss  e python-se   serial[?1l>[?2004l
+]2;pacman -Ss pythonserial]1;pacman[1m[7m%[27m[1m[0m                                                                                                                                                                             ]2;panyue@Saltedfish: ~/tinyos-2.1.2/apps/Blink]1;...2/apps/Blink[0m[27m[24m[J[39m[0m[49m[40m[39m [31m✘[40m[39m panyue@Saltedfish [44m[30m[30m ~/tinyos-2.1.2/apps/Blink [49m[34m[39m [K[?1h=[?2004hpacman -Ss  pythonserialserial serial serial serial serial serial [?1l>[?2004l
+]2;pacman -Ss serial]1;pacman[1;35mextra/[0;1mlibical [1;32m3.0.1-1[0m [1;36m[已安装][0m
+    An open source reference implementation of the icalendar data type and serialization format
+[1;35mextra/[0;1mmetis [1;32m5.1.0.p3-1[0m
+    A set of serial programs for partitioning graphs, partitioning finite element meshes, and producing fill reducing orderings for sparse matrices
+[1;35mextra/[0;1mperl-business-issn [1;32m1.002-3[0m
+    Perl package to work with International Standard Serial Numbers
+[1;35mextra/[0;1mqt5-serialbus [1;32m5.10.1-1[0m [1;34m(qt qt5)[0m
+    Qt module for general purpose serial bus access
+[1;35mextra/[0;1mqt5-serialport [1;32m5.10.1-1[0m [1;34m(qt qt5)[0m
+    Provides access to hardware and virtual serial ports
+[1;35mcommunity/[0;1mcapnproto [1;32m0.6.1-4[0m
+    Cap'n Proto serialization/RPC system
+[1;35mcommunity/[0;1mckermit [1;32m9.0.302-6[0m
+    Portable scriptable network and serial communication software
+[1;35mcommunity/[0;1mcomtool [1;32m1.4-2[0m
+    A cross platform serial debug tools written by python
+[1;35mcommunity/[0;1mgpsd [1;32m3.16-4[0m
+    GPS daemon and library to support USB/serial GPS devices
+[1;35mcommunity/[0;1mhaskell-binary-conduit [1;32m1.2.5-18[0m
+    Data serialization/deserialization conduit library
+[1;35mcommunity/[0;1mhaskell-binary-tagged [1;32m0.1.4.2-48[0m
+    Tagged binary serialisation.
+[1;35mcommunity/[0;1mhaskell-cereal [1;32m0.5.5.0-1[0m
+    A binary serialization library
+[1;35mcommunity/[0;1mhaskell-data-binary-ieee754 [1;32m0.4.4-3[0m
+    Parser/Serialiser for IEEE-754 floating-point values
+[1;35mcommunity/[0;1mhaskell-data-serializer [1;32m0.3.2-14[0m
+    Common API for serialization libraries
+[1;35mcommunity/[0;1mhaskell-json [1;32m0.9.1-13[0m
+    Support for serialising Haskell to and from JSON
+[1;35mcommunity/[0;1mhaskell-juicypixels [1;32m3.2.9.4-2[0m
+    Picture loading/serialization (in png, jpeg, bitmap, gif, tga, tiff and radiance)
+[1;35mcommunity/[0;1mhaskell-persistent [1;32m2.7.3.1-21[0m
+    Type-safe, multi-backend data serialization
+[1;35mcommunity/[0;1mhaskell-safecopy [1;32m0.9.3.3-7[0m
+    Binary serialization with version control.
+[1;35mcommunity/[0;1mhaskell-store [1;32m0.4.3.2-66[0m
+    Fast binary serialization
+[1;35mcommunity/[0;1mhaskell-store-core [1;32m0.4.1-9[0m
+    Fast and lightweight binary serialization
+[1;35mcommunity/[0;1mhaskell-vector-binary-instances [1;32m0.2.4-1[0m
+    Instances of Data.Binary and Data.Serialize for vector
+[1;35mcommunity/[0;1mjava-rxtx [1;32m2.2pre2-4[0m
+    Java library for serial IO
+[1;35mcommunity/[0;1mlibserialport [1;32m0.1.1-2[0m
+    A minimal, cross-platform shared library for sigrok, intended to take care of the OS-specific details when writing software that uses serial ports
+[1;35mcommunity/[0;1mlinuxconsole [1;32m1.6.0-1[0m
+    Set of utilities for joysticks and serial devices
+[1;35mcommunity/[0;1mminicom [1;32m2.7.1-1[0m
+    A serial communication program
+[1;35mcommunity/[0;1mmoserial [1;32m3.0.12-1[0m
+    Clean, friendly GTK+-based serial terminal for the GNOME desktop
+[1;35mcommunity/[0;1mmsgpack-c [1;32m2.1.5-1[0m
+    An efficient object serialization library
+[1;35mcommunity/[0;1mperl-device-modem [1;32m1.57-2[0m
+    Perl extension to talk to modem devices connected via serial port
+[1;35mcommunity/[0;1mperl-device-serialport [1;32m1.04-11[0m
+    POSIX clone of Win32::SerialPort
+[1;35mcommunity/[0;1mperl-json-xs [1;32m3.03-4[0m
+    JSON::XS - JSON serialising/deserialising, done correctly and fast
+[1;35mcommunity/[0;1mperl-soap-lite [1;32m1.26-1[0m
+    Client and server side SOAP implementation
+[1;35mcommunity/[0;1mperl-types-serialiser [1;32m1.0-3[0m
+    simple data types for common serialisation formats
+[1;35mcommunity/[0;1mperl-yaml-libyaml [1;32m0.69-1[0m
+    Perl YAML Serialization using XS and libyaml
+[1;35mcommunity/[0;1mpython-betamax-serializers [1;32m0.2.0-2[0m
+    A set of third-party serializers for Betamax
+[1;35mcommunity/[0;1mpython-jsonpickle [1;32m0.9.6-1[0m
+    Python library for serializing any arbitrary object graph into JSON
+[1;35mcommunity/[0;1mpython-msgpack [1;32m0.5.4-1[0m
+    MessagePack serializer implementation for Python
+[1;35mcommunity/[0;1mpython-oslo-serialization [1;32m2.24.0-2[0m
+    Oslo Serialization library
+[1;35mcommunity/[0;1mpython-pyaml [1;32m17.12.1-1[0m
+    PyYAML-based module to produce pretty and readable YAML-serialized data
+[1;35mcommunity/[0;1mpython-pyserial [1;32m3.4-1[0m
+    Multiplatform Serial Port Module for Python
+[1;35mcommunity/[0;1mpython-serpent [1;32m1.23-2[0m
+    Serializer for literal Python expressions
+[1;35mcommunity/[0;1mpython-u-msgpack [1;32m2.4.1-1[0m
+    portable, lightweight MessagePack serializer and deserializer for Python
+[1;35mcommunity/[0;1mpython2-betamax-serializers [1;32m0.2.0-2[0m
+    A set of third-party serializers for Betamax
+[1;35mcommunity/[0;1mpython2-jsonpickle [1;32m0.9.6-1[0m
+    Python library for serializing any arbitrary object graph into JSON
+[1;35mcommunity/[0;1mpython2-msgpack [1;32m0.5.4-1[0m
+    MessagePack serializer implementation for Python2
+[1;35mcommunity/[0;1mpython2-oslo-serialization [1;32m2.24.0-2[0m
+    Oslo Serialization library
+[1;35mcommunity/[0;1mpython2-pyaml [1;32m17.12.1-1[0m
+    PyYAML-based module to produce pretty and readable YAML-serialized data
+[1;35mcommunity/[0;1mpython2-pyserial [1;32m3.4-1[0m
+    Multiplatform Serial Port Module for Python
+[1;35mcommunity/[0;1mpython2-serpent [1;32m1.23-2[0m
+    Serializer for literal Python expressions
+[1;35mcommunity/[0;1mpython2-u-msgpack [1;32m2.4.1-1[0m
+    portable, lightweight MessagePack serializer and deserializer for Python2
+[1;35mcommunity/[0;1mser2net [1;32m3.5-1[0m
+    A proxy that allows telnet/tcp connections to be made to serial ports
+[1;35mcommunity/[0;1msratom [1;32m0.6.0-2[0m
+    An LV2 Atom RDF serialisation library
+[1;35mcommunity/[0;1mtinyserial [1;32m20090305-2[0m
+    Small minicom replacement for accessing serial ports on Linux inspired by FreeBSD 'tip'
+[1;35marchlinuxcn/[0;1mcereal [1;32m1.2.2-2[0m
+    A C++11 library for serialization
+[1;35marchlinuxcn/[0;1mjulia-git [1;32m1:0.7.0.DEV.4006.g77055b31ce-1[0m
+    Julia is a high-level, high-performance, dynamic programming language.
+[1;35marchlinuxcn/[0;1mlibserial-git [1;32mr168.1201211-1[0m
+    A library for accessing serial ports on POSIX systems (git version)
+[1;35marchlinuxcn/[0;1mpython-dill [1;32m0.2.7.1-1[0m
+    Serialize all of python (almost)
+[1;35marchlinuxcn/[0;1mpython2-dill [1;32m0.2.7.1-1[0m
+    Serialize all of python (almost)
+[1m[7m%[27m[1m[0m                                                                                                                                                                             ]2;panyue@Saltedfish: ~/tinyos-2.1.2/apps/Blink]1;...2/apps/Blink[0m[27m[24m[J[39m[0m[49m[40m[39m panyue@Saltedfish [44m[30m[30m ~/tinyos-2.1.2/apps/Blink [49m[34m[39m [K[?1h=[?2004hpacman -Ss  serialpythonserial[12Dserial      [18D          [2C      [18Dsscriptsudo make telosb install /dev/ttyUSB0rinstall /dev/ttyUSB0[20Deinstall /dev/ttyUSB0[20D[?1l>[?2004l
+]2;sudo make telosb reinstall /dev/ttyUSB0]1;make[sudo] panyue 的密码：
+make: *** 没有规则可制作目标“telosb”。 停止。
+[1m[7m%[27m[1m[0m                                                                                                                                                                             ]2;panyue@Saltedfish: ~/tinyos-2.1.2/apps/Blink]1;...2/apps/Blink[0m[27m[24m[J[39m[0m[49m[40m[39m [31m✘[40m[39m panyue@Saltedfish [44m[30m[30m ~/tinyos-2.1.2/apps/Blink [49m[34m[39m [K[?1h=[?2004hsudo make telosb reinstall /dev/ttyUSB0[?1l>[?2004l
+]2;sudo make telosb reinstall /dev/ttyUSB0]1;makemake: *** 没有规则可制作目标“telosb”。 停止。
+[1m[7m%[27m[1m[0m                                                                                                              

@@ -29,4 +29,4 @@ Using some codes from `zxcpyplib`.
 * Part IV : Implement compute by Split-phase task
 * Prat EX : Sensor data Communication
   * Part EX - 01: Get temporary humidity and photovoltaic data and transfer them to PC
-  * Part EX - 02: Build a base station connected to PC, and send data to base station
+  * Part EX - 02: Build a base station connected to PC, and send data to base station // TO BE FINISHED

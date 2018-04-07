@@ -8,6 +8,8 @@ Hust OS labs for IOT in 2018 spring
 * lab03 - Implement file copy using ring buffer and shared memory
 * lab04 - TinyOS labs - Special for IOT students
 
+Using some codes from `zxcpyplib`.
+
 ## TinyOS Labs
 
 ### About

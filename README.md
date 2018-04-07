@@ -27,6 +27,9 @@ Using some codes from `zxcpyplib`.
 * Part II : Add compute in LED 1
 * Part III: Implement compute by task
 * Part IV : Implement compute by Split-phase task
+
+---
+
 * Prat EX : Sensor data Communication
   * Part EX - 01: Get temporary humidity and photovoltaic data and transfer them to PC
   * Part EX - 02: Build a base station connected to PC, and send data to base station // TO BE FINISHED

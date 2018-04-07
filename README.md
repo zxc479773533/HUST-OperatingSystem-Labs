@@ -1,5 +1,5 @@
 # HUST-OperatingSystem-Labs
-Hust OS labs and IOT TinyOS labs 2018 Spring
+Hust OS labs, including TinyOS labs specially for IOT in 2018 Spring
 
 ## Details
 

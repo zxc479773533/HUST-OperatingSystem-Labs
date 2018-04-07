@@ -1,5 +1,5 @@
 # HUST-OperatingSystem-Labs
-Hust OS labs for IOT in 2018 spring
+Hust OS labs and IOT TinyOS labs 2018 Spring
 
 ## Details
 
@@ -20,7 +20,7 @@ Using some codes from `zxcpyplib`.
 * Compiler: msp430
 * Language: nesC (Network Embedded System C)
 
-# Details
+### Details
 
 * Prepare : Getting start with TinyOS and install Blink in it.
 * Part  I : Implement a Binary counter using LED and one Timer

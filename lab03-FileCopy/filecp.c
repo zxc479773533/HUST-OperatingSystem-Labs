@@ -13,7 +13,7 @@ int main(int argc, char **argv) {
   pid_t readpid_id, writepid_id;
   /* Check args */
   if (argc != 3)
-    err_msg("./filecp <src> <dst>");
+    usage_err("./filecp <src> <dst>");
   
   /* Open files */
   read_fd = open(argv[1], O_RDONLY);

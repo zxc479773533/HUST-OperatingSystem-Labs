@@ -1,12 +1,12 @@
 # HUST-OperatingSystem-Labs
 Hust OS labs, including TinyOS labs specially for IOT in 2018 Spring
 
-## Details
+## OperatingSystem Labs
 
 * lab01 - Implement a single pipe and signal handler
 * lab02 - Synchronize threads using semaphore
 * lab03 - Implement file copy using ring buffer and shared memory
-* lab04 - TinyOS labs - Special for IOT students
+* lab04 - Implement `ls -lR`
 
 Using some codes from `zxcpyplib`.
 

@@ -21,6 +21,11 @@ void err_msg(const char *err);
 void err_exit(const char *err);
 
 /*
+ * usage_err - Announce usage and exit
+ */
+void usage_err(const char *err);
+
+/*
  * fatal_err - Handle fatal error
  */
 void fatal_err(const char *err);

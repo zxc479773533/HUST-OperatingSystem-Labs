@@ -17,7 +17,7 @@ int main(int argc, char **argv) {
   
   /* Open files */
   read_fd = open(argv[1], O_RDONLY);
-  write_fd = open(argv[2], O_WRONLY);
+  write_fd = open(argv[2], O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR);
 
   /* Create and initial 3 semaphore for user */
   if ((semid = semget(IPC_PRIVATE, 3, S_IRUSR | S_IWUSR)) == -1)

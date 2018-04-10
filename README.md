@@ -30,6 +30,9 @@ Using some codes from `zxcpyplib`.
 
 ---
 
-* Prat EX : Sensor data Communication
-  * Part EX - 01: Get temporary humidity and photovoltaic data and transfer them to PC
-  * Part EX - 02: Build a base station connected to PC, and send data to base station // TO BE FINISHED
+* Prat EX : Simple Wireless Sensor Networks
+  * Part EX - 01: Get temporary, humidity and photovoltaic data by sensors, the send broadcast data packets
+  * Part EX - 02: Build a base station connected to PC, and transfer data packets to PC by serial
+  * Part EX - 03: BUild a java client to analyse the data
+
+![](./Sensor-Network.png)

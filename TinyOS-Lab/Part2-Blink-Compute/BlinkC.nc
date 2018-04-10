@@ -1,5 +1,5 @@
 /*
- * HUST IOT TinyOS Lab Part IV - Split phase
+ * HUST IOT TinyOS Lab Part II - Blink Compute
  *
  * By Pan Yue, modifyed from tinyos/apps/Blink/BlinkC.nc
  */
@@ -25,25 +25,13 @@ implementation
     call Timer2.startPeriodic( 1000 );
   }
 
-  uint32_t i;
-  task void computeTask()
-  {
-    uint32_t tmp = i;
-    for (;i < tmp + 10000 && i < 400001; i++) {}
-    if (i > 400000) {
-      i = 0;
-    }
-    else {
-      post computeTask();
-    }
-  }
-
   event void Timer0.fired()
   {
+    uint32_t i;
     dbg("BlinkC", "Timer 0 fired @ %s.\n", sim_time_string());
     printf("LED Toggle: 0\n");
-    call Leds.led0Toggle();
-    post computeTask();
+    for (i = 0; i < 400001; i++)
+      call Leds.led0Toggle();
   }
 
   event void Timer1.fired()

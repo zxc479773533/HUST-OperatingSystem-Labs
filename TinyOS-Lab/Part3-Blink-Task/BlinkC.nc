@@ -1,5 +1,5 @@
 /*
- * HUST IOT TinyOS Lab Part IV - Split phase
+ * HUST IOT TinyOS Lab Part III - Blink Task
  *
  * By Pan Yue, modifyed from tinyos/apps/Blink/BlinkC.nc
  */
@@ -28,14 +28,7 @@ implementation
   uint32_t i;
   task void computeTask()
   {
-    uint32_t tmp = i;
-    for (;i < tmp + 10000 && i < 400001; i++) {}
-    if (i > 400000) {
-      i = 0;
-    }
-    else {
-      post computeTask();
-    }
+    for (i = 0; i < 10001; i++) {}
   }
 
   event void Timer0.fired()

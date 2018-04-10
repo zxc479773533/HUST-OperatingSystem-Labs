@@ -1,5 +1,5 @@
 /*
- * HUST IOT TinyOS Lab Part IV - Split phase
+ * HUST IOT TinyOS Lab Part III - Blink Task
  *
  * By Pan Yue, modifyed from tinyos/apps/Blink/BlinkAppC.nc
  */

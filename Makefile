@@ -111,32 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named filecp
-
-# Build rule for target.
-filecp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 filecp
-.PHONY : filecp
-
-# fast build rule for target.
-filecp/fast:
-	$(MAKE) -f CMakeFiles/filecp.dir/build.make CMakeFiles/filecp.dir/build
-.PHONY : filecp/fast
-
-#=============================================================================
-# Target rules for targets named sync
-
-# Build rule for target.
-sync: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sync
-.PHONY : sync
-
-# fast build rule for target.
-sync/fast:
-	$(MAKE) -f CMakeFiles/sync.dir/build.make CMakeFiles/sync.dir/build
-.PHONY : sync/fast
-
-#=============================================================================
 # Target rules for targets named pipe
 
 # Build rule for target.
@@ -161,6 +135,45 @@ fifo: cmake_check_build_system
 fifo/fast:
 	$(MAKE) -f CMakeFiles/fifo.dir/build.make CMakeFiles/fifo.dir/build
 .PHONY : fifo/fast
+
+#=============================================================================
+# Target rules for targets named sync
+
+# Build rule for target.
+sync: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sync
+.PHONY : sync
+
+# fast build rule for target.
+sync/fast:
+	$(MAKE) -f CMakeFiles/sync.dir/build.make CMakeFiles/sync.dir/build
+.PHONY : sync/fast
+
+#=============================================================================
+# Target rules for targets named dir
+
+# Build rule for target.
+dir: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dir
+.PHONY : dir
+
+# fast build rule for target.
+dir/fast:
+	$(MAKE) -f CMakeFiles/dir.dir/build.make CMakeFiles/dir.dir/build
+.PHONY : dir/fast
+
+#=============================================================================
+# Target rules for targets named filecp
+
+# Build rule for target.
+filecp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 filecp
+.PHONY : filecp
+
+# fast build rule for target.
+filecp/fast:
+	$(MAKE) -f CMakeFiles/filecp.dir/build.make CMakeFiles/filecp.dir/build
+.PHONY : filecp/fast
 
 #=============================================================================
 # Target rules for targets named zxcpyp_lib
@@ -283,6 +296,33 @@ lab03-FileCopy/filecp.c.s:
 	$(MAKE) -f CMakeFiles/filecp.dir/build.make CMakeFiles/filecp.dir/lab03-FileCopy/filecp.c.s
 .PHONY : lab03-FileCopy/filecp.c.s
 
+lab04-Directory/directory.o: lab04-Directory/directory.c.o
+
+.PHONY : lab04-Directory/directory.o
+
+# target to build an object file
+lab04-Directory/directory.c.o:
+	$(MAKE) -f CMakeFiles/dir.dir/build.make CMakeFiles/dir.dir/lab04-Directory/directory.c.o
+.PHONY : lab04-Directory/directory.c.o
+
+lab04-Directory/directory.i: lab04-Directory/directory.c.i
+
+.PHONY : lab04-Directory/directory.i
+
+# target to preprocess a source file
+lab04-Directory/directory.c.i:
+	$(MAKE) -f CMakeFiles/dir.dir/build.make CMakeFiles/dir.dir/lab04-Directory/directory.c.i
+.PHONY : lab04-Directory/directory.c.i
+
+lab04-Directory/directory.s: lab04-Directory/directory.c.s
+
+.PHONY : lab04-Directory/directory.s
+
+# target to generate assembly for a file
+lab04-Directory/directory.c.s:
+	$(MAKE) -f CMakeFiles/dir.dir/build.make CMakeFiles/dir.dir/lab04-Directory/directory.c.s
+.PHONY : lab04-Directory/directory.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -290,11 +330,12 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... filecp"
-	@echo "... sync"
 	@echo "... pipe"
 	@echo "... fifo"
+	@echo "... sync"
+	@echo "... dir"
+	@echo "... filecp"
+	@echo "... edit_cache"
 	@echo "... zxcpyp_lib"
 	@echo "... lab01-Pipe/fifo.o"
 	@echo "... lab01-Pipe/fifo.i"
@@ -308,6 +349,9 @@ help:
 	@echo "... lab03-FileCopy/filecp.o"
 	@echo "... lab03-FileCopy/filecp.i"
 	@echo "... lab03-FileCopy/filecp.s"
+	@echo "... lab04-Directory/directory.o"
+	@echo "... lab04-Directory/directory.i"
+	@echo "... lab04-Directory/directory.s"
 .PHONY : help
 
 

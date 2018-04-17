@@ -19,3 +19,7 @@ target_link_libraries(sync zxcpyp_lib pthread)
 # build lab03
 add_executable(filecp ./lab03-FileCopy/filecp.c)
 target_link_libraries(filecp zxcpyp_lib)
+
+# build lab04
+add_executable(dir ./lab04-Directory/directory.c)
+target_link_libraries(dir zxcpyp_lib)

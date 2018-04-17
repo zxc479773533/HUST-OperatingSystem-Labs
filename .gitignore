@@ -52,15 +52,18 @@ Mkfile.old
 dkms.conf
 
 
-# My Comfigrations
+# Project files
 .vscode
 build
 CMakeFiles
 CMakeScripts
 CMakeCache.txt
 cmake_install.cmake
+
+# My Executables
 pipe
 fifo
 lab01_fifo
 sync
 filecp
+dir

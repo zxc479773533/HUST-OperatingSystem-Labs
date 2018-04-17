@@ -1,6 +1,8 @@
 # HUST-OperatingSystem-Labs
 Hust OS labs, including TinyOS labs specially for IOT in 2018 Spring
 
+Only for reference.
+
 ## OperatingSystem Labs
 
 * lab01 - Implement a single pipe and signal handler
@@ -36,3 +38,5 @@ Using some codes from `zxcpyplib`.
   * Part EX - 03: BUild a java client to analyse the data
 
 ![](./Sensor-Network.png)
+
+Finished on Apr.17 2018

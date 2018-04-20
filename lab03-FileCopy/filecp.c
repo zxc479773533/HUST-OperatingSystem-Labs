@@ -17,7 +17,7 @@ int main(int argc, char **argv) {
   
   /* Open files */
   read_fd = open(argv[1], O_RDONLY);
-  write_fd = open(argv[2], O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR);
+  write_fd = open(argv[2], O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR | S_IEXEC);
 
   /* Create and initial 3 semaphore for user */
   if ((semid = semget(IPC_PRIVATE, 3, S_IRUSR | S_IWUSR)) == -1)
@@ -89,8 +89,8 @@ int read_buf(int read_fd, int shmid_head, int shmid_tail, int semid) {
     err_exit("read_buf: Shared memory attach");
   /* Reading */
   for (;;) {
-    sem_p(semid, FULL);
     sem_p(semid, MUTEX);
+    sem_p(semid, FULL);
     /* Read data */
     read_num = read(read_fd, ring_buf_tail->data, RING_BUF_LEN);
     if (read_num == -1)

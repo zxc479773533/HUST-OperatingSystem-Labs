@@ -17,7 +17,7 @@ int main(int argc, char **argv) {
   
   /* Open files */
   read_fd = open(argv[1], O_RDONLY);
-  write_fd = open(argv[2], O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR | S_IEXEC);
+  write_fd = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IEXEC);
 
   /* Create and initial 3 semaphore for user */
   if ((semid = semget(IPC_PRIVATE, 3, S_IRUSR | S_IWUSR)) == -1)
@@ -56,7 +56,7 @@ int main(int argc, char **argv) {
 
     /* Child 1 - read data */
     case 0:
-      read_buf(read_fd, shmid_head, shmid_head, semid);
+      read_buf(read_fd, shmid_head, semid);
       exit(0);
     
     /* Parent pid */
@@ -67,7 +67,7 @@ int main(int argc, char **argv) {
 
         /* Child 2 - write data */
         case 0:
-          write_buf(write_fd, shmid_head, shmid_head, semid);
+          write_buf(write_fd, shmid_head, semid);
           exit(0);
 
         /* Parent pid */
@@ -81,7 +81,7 @@ int main(int argc, char **argv) {
   }
 }
 
-int read_buf(int read_fd, int shmid_head, int shmid_tail, int semid) {
+int read_buf(int read_fd, int shmid_tail, int semid) {
   int read_num;
   ring_buf *ring_buf_tail;
   /* Attach ring buffer tail for read in */
@@ -114,10 +114,10 @@ int read_buf(int read_fd, int shmid_head, int shmid_tail, int semid) {
   }
 }
 
-int write_buf(int write_fd, int shmid_head, int shmid_tail, int semid) {
+int write_buf(int write_fd, int shmid_head, int semid) {
   ring_buf *ring_buf_head;
   /* Attach ring buffer head for write out */
-  if ((ring_buf_head = (ring_buf*)shmat(shmid_tail, NULL, 0)) == (void*)-1)
+  if ((ring_buf_head = (ring_buf*)shmat(shmid_head, NULL, 0)) == (void*)-1)
     err_exit("write_buf: Shared memory attach");
   /* Writting */
   for (;;) {

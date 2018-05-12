@@ -23,9 +23,9 @@ int semid;
 /*
  * read_buf - copy buffer from src to ringbuf
  */
-int read_buf(int read_fd, int shmid_head, int shmid_tail, int semid);
+int read_buf(int read_fd, int shmid_tail, int semid);
 
 /*
  * write_buf - copy buffer from ring buf to dst
  */
-int write_buf(int write_fd, int shmid_head, int shmid_tail, int semid);
+int write_buf(int write_fd, int shmid_head, int semid);

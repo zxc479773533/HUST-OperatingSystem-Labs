@@ -89,8 +89,8 @@ int read_buf(int read_fd, int shmid_tail, int semid) {
     err_exit("read_buf: Shared memory attach");
   /* Reading */
   for (;;) {
-    sem_p(semid, MUTEX);
     sem_p(semid, FULL);
+    sem_p(semid, MUTEX);
     /* Read data */
     read_num = read(read_fd, ring_buf_tail->data, RING_BUF_LEN);
     if (read_num == -1)
@@ -109,8 +109,8 @@ int read_buf(int read_fd, int shmid_tail, int semid) {
     shmid_tail = ring_buf_tail->next_shmid;
     if ((ring_buf_tail = (ring_buf*)shmat(shmid_tail, NULL, 0)) == (void*)-1)
       err_exit("read_buf: Shared memory attach");
-    sem_v(semid, EMPTY);
     sem_v(semid, MUTEX);
+    sem_v(semid, EMPTY);
   }
 }
 

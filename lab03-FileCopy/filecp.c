@@ -100,8 +100,8 @@ int read_buf(int read_fd, int shmid_tail, int semid) {
       ring_buf_tail->status = STATUS_FINISH;
       ring_buf_tail->size = read_num;
       close(read_fd);
+      sem_v(semid, MUTEX);    
       sem_v(semid, EMPTY);
-      sem_v(semid, MUTEX);      
       return 0;
     }
     ring_buf_tail->size = read_num;
